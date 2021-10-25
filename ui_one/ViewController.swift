@@ -10,58 +10,49 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var textLabel: UILabel!
     
+    @IBOutlet weak var plus: UIButton!
+    @IBOutlet weak var minus: UIButton!
+    @IBOutlet weak var reset: UIButton!
+    
     
     @IBAction func plus(_ sender: UIButton) {
-        if sender.accessibilityLabel == "plus"{
                 let counterString: String = textLabel.text!
                 let newCount: Int! = Int(counterString)
                 if (newCount + 1) <= 10 {
                     textLabel.text = String(newCount + 1)
+                    plus.isEnabled = true
+                    minus.isEnabled = true
                 }
                 else{
+                    plus.isEnabled = false
                     let alert = UIAlertController(title: "Внимание!", message: "Превышен лимит прибваления", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-                          switch action.style{
-                          case .default:
-                                print("default")
-                          case .cancel:
-                                print("cancel")
-                          case .destructive:
-                                print("destructive")
-                    }}))
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
                     self.present(alert, animated: true, completion: nil)
                 }
-            }
-        
     }
     
+    
+    
     @IBAction func minus(_ sender: UIButton) {
-        if sender.accessibilityLabel == "minus"{
             let counterString: String = textLabel.text!
             let newCount: Int! = Int(counterString)
             if (newCount - 1) >= -10 {
                 textLabel.text = String(newCount - 1)
+                minus.isEnabled = true
+                plus.isEnabled = true
             }
             else{
+                minus.isEnabled = false
                 let alert = UIAlertController(title: "Внимание!", message: "Превышен лимит убавления", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-                      switch action.style{
-                      case .default:
-                            print("default")
-                      case .cancel:
-                            print("cancel")
-                      case .destructive:
-                            print("destructive")
-                }}))
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
                 self.present(alert, animated: true, completion: nil)
             }
-        }
     }
     
     @IBAction func reset(_ sender: UIButton) {
-        if sender.accessibilityLabel == "reset"{
             textLabel.text = "0"
-        }
+            plus.isEnabled = true
+            minus.isEnabled = true
     }
 
     override func viewDidLoad() {
