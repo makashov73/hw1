@@ -22,9 +22,12 @@ class ViewController: UIViewController {
                     textLabel.text = String(newCount + 1)
                     plus.isEnabled = true
                     minus.isEnabled = true
+                    plus.backgroundColor = .orange
+                    minus.backgroundColor = .orange
                 }
                 else{
                     plus.isEnabled = false
+                    plus.backgroundColor = .gray
                     let alert = UIAlertController(title: "Внимание!", message: "Превышен лимит прибваления", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default))
                     self.present(alert, animated: true, completion: nil)
@@ -40,9 +43,12 @@ class ViewController: UIViewController {
                 textLabel.text = String(newCount - 1)
                 minus.isEnabled = true
                 plus.isEnabled = true
+                plus.backgroundColor = .orange
+                minus.backgroundColor = .orange
             }
             else{
                 minus.isEnabled = false
+                minus.backgroundColor = .gray
                 let alert = UIAlertController(title: "Внимание!", message: "Превышен лимит убавления", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default))
                 self.present(alert, animated: true, completion: nil)
@@ -53,6 +59,8 @@ class ViewController: UIViewController {
             textLabel.text = "0"
             plus.isEnabled = true
             minus.isEnabled = true
+            plus.backgroundColor = .orange
+            minus.backgroundColor = .orange
     }
 
     override func viewDidLoad() {

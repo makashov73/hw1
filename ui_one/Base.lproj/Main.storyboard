@@ -58,7 +58,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neS-XD-4WE">
-                                        <rect key="frame" x="108" y="262.5" width="110" height="66"/>
+                                        <rect key="frame" x="288" y="262.5" width="110" height="66"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <accessibility key="accessibilityConfiguration" label="reset"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="45"/>
@@ -77,12 +77,12 @@
                                     <constraint firstItem="4oD-qJ-ieL" firstAttribute="trailing" secondItem="zc5-mj-0xF" secondAttribute="trailing" constant="16" id="4VP-ek-bsL"/>
                                     <constraint firstItem="5Ia-jX-p9O" firstAttribute="top" secondItem="zc5-mj-0xF" secondAttribute="bottom" id="6iX-fr-iKP"/>
                                     <constraint firstItem="BBu-xi-FcW" firstAttribute="leading" secondItem="4oD-qJ-ieL" secondAttribute="leading" constant="16" id="Ah7-SA-DpN"/>
+                                    <constraint firstItem="4oD-qJ-ieL" firstAttribute="trailing" secondItem="neS-XD-4WE" secondAttribute="trailing" constant="16" id="BiC-np-UsE"/>
                                     <constraint firstItem="BBu-xi-FcW" firstAttribute="top" secondItem="zc5-mj-0xF" secondAttribute="bottom" id="Fjf-73-BM0"/>
                                     <constraint firstItem="neS-XD-4WE" firstAttribute="top" secondItem="zc5-mj-0xF" secondAttribute="bottom" id="TUe-sx-Nqc"/>
                                     <constraint firstItem="Ufg-Nv-jGr" firstAttribute="top" secondItem="4oD-qJ-ieL" secondAttribute="top" id="foD-Kh-saV"/>
                                     <constraint firstItem="5Ia-jX-p9O" firstAttribute="leading" secondItem="BBu-xi-FcW" secondAttribute="trailing" constant="16" id="gvG-Pm-O0R"/>
                                     <constraint firstItem="zc5-mj-0xF" firstAttribute="leading" secondItem="4oD-qJ-ieL" secondAttribute="leading" constant="16" id="jEu-yF-EVC"/>
-                                    <constraint firstItem="neS-XD-4WE" firstAttribute="leading" secondItem="5Ia-jX-p9O" secondAttribute="trailing" constant="16" id="ocS-Ef-KYK"/>
                                     <constraint firstItem="zc5-mj-0xF" firstAttribute="top" secondItem="Ufg-Nv-jGr" secondAttribute="bottom" constant="30" id="qXQ-Hq-RrP"/>
                                 </constraints>
                             </view>
